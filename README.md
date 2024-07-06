@@ -9,7 +9,7 @@
 <br>
 <br>
 <br>
-I'd be glad to create a README.md for your Gas Turbine repository, incorporating the best aspects of the provided responses and addressing potential shortcomings:
+
 
 **Gas Turbine Anomaly Prediction**
 
@@ -18,10 +18,10 @@ This repository provides a suite of machine learning models for predicting Nitro
 **Contents**
 
 * `models.zip`: Compressed file containing pre-trained machine learning models:
-    * `nox_regressor.pkl`: BaggingRegressor model for NOx prediction.
-    * `co_regressor.pkl`: BaggingRegressor model for CO prediction.
-    * `nox_anomaly.pkl`: BaggingClassifier model for NOx anomaly detection.
-    * `co_anomaly.pkl`: BaggingClassifier model for CO anomaly detection.
+    * `pred_model_nox.pkl`: BaggingRegressor model for NOx prediction.
+    * `pred_model_co.pkl`: BaggingRegressor model for CO prediction.
+    * `class_model_nox.pkl`: BaggingClassifier model for NOx anomaly detection.
+    * `class_model_co.pkl`: BaggingClassifier model for CO anomaly detection.
 * `app.py`: Flask application to take user input, predict NOx and CO emissions, and detect anomalies.
 * `requirements.txt`: Text file listing required Python libraries.
 
@@ -68,3 +68,7 @@ This repository provides a starting point for gas turbine anomaly prediction. Yo
 **Disclaimer**
 
 The provided models are for educational and demonstration purposes only. Their accuracy depends on the specific training data used. For real-world applications, thorough testing and validation with high-quality data are crucial.
+
+**Contributing**
+
+Feel free to fork the repository and submit pull requests with improvements or bug fixes.
