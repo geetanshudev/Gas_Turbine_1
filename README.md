@@ -33,7 +33,10 @@ This repository provides a suite of machine learning models for predicting Nitro
 
 2. **Install Dependencies:**
    - Open a terminal or command prompt in the extracted directory.
-   - Install the required Python libraries using `pip install -r requirements.txt`.
+   - Install the required Python libraries from requiremnets.txt
+      ```bash
+   pip install -r requirements.txt
+   ```
 
 **Running the Application**
 
