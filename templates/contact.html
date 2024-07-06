@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        body{
+            background-color: #185d99e7;
+        }
+        .topnav{
+    overflow: hidden;
+    background-color: #333;
+}
+.topnav a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topnav a.active{
+    background-color: #86e3e6;
+    color: black;
+}
+.topnav a:hover{
+    background-color: #092f82;
+    color: #c2e2e3;
+}
+
+#Head{
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-size: 34px; 
+   text-align: center;
+}
+#content{
+    margin-top: 2%;
+    background-color: aliceblue;
+    border-radius: 2px;
+    
+
+}
+    </style>
+</head>
+<body>
+    <p id="Head">Contact</p>
+    <div class="topnav">
+        <a  href="{{url_for('index')}}">Home</a>
+        <a href="#">Sample</a>
+        <a class="active" href="{{url_for('contac')}}">Contact</a>
+        <a  href="{{url_for('about')}}">About</a>
+    </div>
+
+    <div id="content">
+        This Project is built by Geetanshu Dev
+        for internship project.
+    </div>
+</body>
+</html>

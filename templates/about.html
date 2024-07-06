@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        body{
+            background-color: #185d99e7;
+        }
+        .topnav{
+    overflow: hidden;
+    background-color: #333;
+}
+.topnav a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topnav a.active{
+    background-color: #86e3e6;
+    color: black;
+}
+.topnav a:hover{
+    background-color: #092f82;
+    color: #c2e2e3;
+}
+
+#Head{
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-size: 34px; 
+   text-align: center;
+}
+#content{
+    margin-top: 2%;
+    background-color: aliceblue;
+    border-radius: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    
+
+}
+    </style>
+</head>
+<body>
+    <p id="Head">About</p>
+    <div class="topnav">
+        <a  href="{{url_for('index')}}">Home</a>
+        <a href="#">Sample</a>
+        <a href="{{url_for('contac')}}">Contact</a>
+        <a class="active" href="{{url_for('about')}}">About</a>
+    </div>
+
+    <div id="content">
+
+        <div>
+           <strong> About Us: Empowering Sustainable Gas Turbine Operations with Data-Driven Insights</strong>
+        </div>
+        
+        <br>
+        <br>
+        I'm Geetanshu Dev Meshram, and I'm part of a passionate team of engineers at IIIT Naya Raipur dedicated to unlocking the potential of data-driven insights for gas turbine technology. We firmly believe that by leveraging the power of data, we can significantly optimize performance, minimize emissions, and ensure the long-term, sustainable operation of gas turbines.
+        <br>
+        <br>
+        <strong>Our Mission:</strong>
+        <br>
+        Here at IIIT Naya Raipur, we're driven by a clear mission:
+        <ul>
+            <li>Revolutionize gas turbine performance prediction: We've developed a groundbreaking online platform that empowers users to predict CO and NOx emission levels for their gas turbines. By simply entering nine key data points, our cutting-edge algorithms will generate a comprehensive prediction, providing valuable foresight into your turbine's behavior.</li>
+            <li>Proactive anomaly detection: Our platform goes beyond prediction. It actively identifies potential anomalies in your CO and NOx emission levels, giving you a crucial advantage. With this early warning system, you can take corrective action before minor issues escalate into significant problems, ensuring efficient and compliant operation.</li>
+            <li>Foster a data-driven future:  We're strong advocates for the transformative power of data. Our platform offers valuable insights that can help you optimize gas turbine maintenance schedules, reduce fuel consumption, and minimize your environmental impact.</li>
+        </ul>
+        
+        <br>
+        <br>
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <p>This is CO anomaly level confusion matrix </p>
+                    </td>
+                    <td>
+                        <p>This is NOx anomaly level confusion matrix</p>
+                    </td>
+                </tr>
+                    <td>
+                        <img src="{{url_for('static',filename='CO_Model.png')}}" alt="CO Confusion Matrix" height="332px">
+                    </td>
+                    <td>
+                        <img src="{{url_for('static',filename='NOx_Model.png')}}" alt="NOx Confusion Matrix" height="332px">
+                    </td>
+
+                </tr>
+            </table>
+
+        </div>
+        
+        
+        
+      
+
+    </div>
+</body>
+</html>

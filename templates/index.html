@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas-Turbine</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='index.css')}}">
+</head>
+<body>
+    <p id="Head">Anomaly Detection on Gas Turbine</p>
+    <br>
+    <div class="topnav">
+        <a class="active" href="{{url_for('index')}}">Home</a>
+        <a href="#">Sample</a>
+        <a href="{{url_for('contac')}}">Contact</a>
+        <a href="{{url_for('about')}}">About</a>
+    </div>
+    <table id="tab">
+        <form action="" method="post">
+            <tr>
+                <td>
+                    Enter Value of Ambient Temperature
+                </td>
+                <td>
+                    <input type="number" name="AT" id="num" placeholder="Enter value of AT" min="-6.2348" max="37.1030">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter Value of Ambient Pressure
+                </td>
+                <td>
+                    <input type="number" name="AP" id="num" placeholder="Enter value of AP" min="985.8500" max="1036.6000">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter Value of Ambient Humidity
+                </td>
+                <td>
+                    <input type="number" name="AH" id="num" placeholder="Enter value of AH" min="24.0850" max="100.2000">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter Value of Air Filter Difference Pressure
+                </td>
+                <td>
+                    <input type="number" name="AFDP" id="num" placeholder="Enter value of AFDP" min="2.0874" max="7.6106">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter Value of Gas Turbine Exhaust Pressure
+                </td>
+                <td>
+                    <input type="number" name="GTEP" id="num" placeholder="Enter value of GTEP" min="17.6980" max="40.7160">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter Value of Turbine Inlet Temperature
+                </td>
+                <td>
+                    <input type="number" name="TIT" id="num" placeholder="Enter value of TIT" min="1000.8000" max="1100.9000">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter Value of Turbine After Temperature
+                </td>
+                <td>
+                    <input type="number" name="TAT" id="num" placeholder="Enter value of TAT" min="511.0400" max="550.6100">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter Value of Turbine Energy Yield
+                </td>
+                <td>
+                    <input type="number" name="TEY" id="num" placeholder="Enter value of TEY" min="100.0200" max="179.5000">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter Value of Compressor Discharge Pressure
+                </td>
+                <td>
+                    <input type="number" name="CDP" id="num" placeholder="Enter value of CDP" min="9.8518" max="15.1590">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="submit" type="submit" value="Submit">
+                    <input id="clear" type="reset" value="Clear">
+                </td>
+            </tr>
+            <tr>
+                <td>Value of Carbon Monoxide</td>
+                <td id="copred">
+                    {{CO}}
+                 </td>
+            </tr>
+            <tr>
+                <td>Value of Nitrogen Oxide</td>
+
+                <td id="noxpred">
+                   {{NOX}}
+                </td>
+            </tr>
+            
+        </form>
+    </table>
+    <table id="tab2">
+        <tr>
+            <td id="level">
+                CO Level
+            </td>
+            <td>{{ COlevel == 1 and "Contaminated" or "Not Contaminated" }}</td>
+        </tr>
+        <tr>
+            <td id="level">NOX Level</td>
+            <td>{{ NOXlevel == 1 and "Contaminated" or "Not Contaminated" }}</td>
+        </tr>
+    </table>
+</body>
+</html>
