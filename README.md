@@ -42,7 +42,10 @@ This repository provides a suite of machine learning models for predicting Nitro
 
 1. **Start the Flask App:**
    - In the terminal, navigate to the directory containing `app.py`.
-   - Run the Flask application with `python app.py`.
+   - Run the Flask application with this command
+     ```bash
+     python app.py
+     ```
 
 2. **User Interaction:**
    - The Flask app will typically start on `http://127.0.0.1:5000/` (localhost port 5000). Access it in your web browser.
